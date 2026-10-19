@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+<meta name="theme-color" content="#FBF6F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#18131A" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<title>웨딩노트</title>
+<link rel="icon" href="./icon-192.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="웨딩노트">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Outfit:wght@500;600;700&display=swap">
+  <script type="module" crossorigin src="./assets/index-pwa-CYtu60wv.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-pwa-DNkQ6nZx.css">
+</head>
+<body>
+<div id="gate" class="gate"><div class="g-card"><p class="g-sub">불러오는 중…</p></div></div>
+<div class="wrap">
+  <!-- HOME -->
+  <section id="tab-home">
+    <div id="home2" class="home2"></div>
+    <div class="card plan-card" id="planCard"></div>
+    <div id="legacyHome" hidden>
+    <header class="greet">
+      <div style="min-width:0"><span class="sub" id="hello">안녕하세요</span><h1 id="coupleNames">우리 둘</h1><span class="sub">오늘도 결혼 준비 한 걸음 💍</span></div>
+      <button class="avatars" id="openSettings" aria-label="설정"><span class="av a1" id="av1">나</span><span class="av a2" id="av2">너</span></button>
+    </header>
+    <div class="banner">
+      <svg class="rings" viewBox="0 0 120 80" aria-hidden="true"><circle cx="48" cy="40" r="24" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="5"/><circle cx="74" cy="40" r="24" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="5"/></svg>
+      <span class="b-label">우리 결혼식까지</span>
+      <div class="dday num" id="dday">D-day</div>
+      <div class="when" id="when">불러오는 중</div>
+    </div>
+    <div class="card prog-card" data-go="check" tabindex="0">
+      <div class="ring" aria-label="준비 진행률">
+        <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="var(--track)" stroke-width="3.6"/><circle id="ringArc" cx="18" cy="18" r="15" fill="none" stroke="url(#rg)" stroke-width="3.6" stroke-linecap="round" stroke-dasharray="0 100" pathLength="100"/><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EC8FA9"/><stop offset="1" stop-color="#A47BCB"/></linearGradient></defs></svg>
+        <div class="pct num"><span id="ringPct">0%</span></div>
+      </div>
+      <div class="grow"><div class="label">준비 진행률</div><div class="t" id="progText">-</div><div class="sub" id="progSub">잘하고 있어요!</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="tiles num" id="homeStats"></div>
+    <div class="block">
+      <h2>빠른 추가</h2>
+      <div class="quick">
+        <button data-qa="task"><span class="qi" style="background:var(--accent-soft);color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>할 일</button>
+        <button data-qa="cost"><span class="qi" style="background:var(--gold-soft);color:var(--gold)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18M16 15h2"/></svg></span>비용·업체</button>
+        <button data-qa="event"><span class="qi" style="background:var(--sky-soft);color:var(--sky)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>일정</button>
+        <button data-qa="guest"><span class="qi" style="background:var(--lilac-soft);color:var(--lilac)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6M17 8v6M14 11h6"/></svg></span>하객</button>
+      </div>
+    </div>
+    <div class="card block">
+      <div class="row-head"><h2 id="weekTitle">이번 주</h2><button class="link" data-go="cal">전체 달력</button></div>
+      <div class="week" id="week"></div>
+    </div>
+    <div class="card block">
+      <div class="row-head"><h2>지금 챙길 일</h2><button class="link" data-go="check">전체 보기</button></div>
+      <ul class="list" id="homeTodo"></ul>
+    </div>
+    <div class="card block">
+      <div class="row-head"><h2>다가오는 결제</h2><button class="link" data-go="budget">예산 보기</button></div>
+      <ul class="list" id="homePay"></ul>
+    </div>
+    <div class="card block">
+      <div class="row-head"><h2>다가오는 일정</h2><button class="link" data-go="cal">캘린더</button></div>
+      <ul class="list" id="homeEvents"></ul>
+    </div>
+    </div>
+  </section>
+
+  <!-- ALL -->
+  <section id="tab-all" hidden></section>
+
+  <!-- CHECKLIST -->
+  <section id="tab-check" hidden>
+    <div class="head"><h1>체크리스트</h1><span class="sub num" id="checkCount"></span></div>
+    <div class="smart" id="smart"></div>
+    <form class="qadd" id="qadd" autocomplete="off"><span class="qplus" aria-hidden="true">+</span><input id="qaddInput" type="text" placeholder="할 일 빠르게 추가" enterkeyhint="done"><button type="submit">추가</button></form>
+    <div class="seg" id="groupMode"><button data-v="topic" aria-pressed="true">주제별</button><button data-v="period" aria-pressed="false">시기별</button><button data-v="cal" aria-pressed="false">달력</button></div>
+    <div class="chips" id="checkCats" hidden></div>
+    <div id="periods" style="display:flex;flex-direction:column;gap:14px"></div>
+    <div id="tcal" style="display:flex;flex-direction:column;gap:14px" hidden></div>
+    <button class="link" id="openTpl" style="align-self:center">+ 추천 체크리스트에서 추가</button>
+  </section>
+
+  <!-- BUDGET -->
+  <section id="tab-budget" hidden>
+    <div class="head"><h1>예산</h1><button class="link" id="addCost">+ 비용 추가</button></div>
+    <div class="money-top" id="moneyTop"></div>
+    <button class="est-btn" id="openEstimate" type="button"><span>예산을 잘 모르겠다면</span><b>지역 평균으로 예상 비용 보기 ›</b></button>
+    <div class="seg" id="budgetSeg"><button data-b="cat" aria-pressed="true">카테고리</button><button data-b="sched" aria-pressed="false">결제 예정</button><button data-b="ledger" aria-pressed="false">낸 돈</button><button data-b="vendor" aria-pressed="false">업체</button></div>
+    <div id="bCat" class="tboard"></div>
+    <div id="bSched" class="card block" hidden><div class="row-head"><h2>결제 예정</h2><span class="sub num" id="schedSum"></span></div><div id="sched"></div></div>
+    <div id="bLedger" class="card block" hidden><div class="row-head"><h2>낸 돈</h2><span class="sub num" id="ledgerSum"></span></div><div id="ledger"></div></div>
+    <div id="bVendor" hidden style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span class="sub num" id="vendorSum"></span><button class="link" id="addVendor">+ 업체 추가</button></div>
+      <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="vendorSearch" type="search" placeholder="업체, 항목 검색"></div>
+      <div id="vendorList" style="display:flex;flex-direction:column;gap:10px"></div>
+    </div>
+  </section>
+
+  <!-- CALENDAR -->
+  <section id="tab-cal" hidden>
+    <div class="cal-head"><button id="prevM" aria-label="이전 달">‹</button><h1 id="calTitle" class="num"></h1><button id="nextM" aria-label="다음 달">›</button></div>
+    <div class="card" style="padding:10px">
+      <div class="cal" id="cal"></div>
+      <div class="legend" style="justify-content:center"><span><i class="d-ev" style="border-radius:50%"></i>일정</span><span><i class="d-task" style="border-radius:50%"></i>할 일 마감</span><span><i class="d-pay" style="border-radius:50%"></i>결제</span></div>
+    </div>
+    <div class="block"><h2 id="dayTitle"></h2><ul class="list" id="dayList"></ul></div>
+  </section>
+
+  <!-- GUESTS -->
+  <section id="tab-guests" hidden>
+    <div class="head"><h1>하객</h1><span style="display:flex;gap:14px"><button class="link" id="bulkBtn">한 번에 추가</button><button class="link" id="mealBtn">식대 설정</button></span></div>
+    <div class="gsum num" id="guestStats"></div>
+    <div class="card" id="mealCard"></div>
+    <div class="seg" id="guestSide"><button data-g="all" aria-pressed="true">전체</button></div>
+    <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="guestSearch" type="search" placeholder="이름 검색"></div>
+    <div class="seg" id="guestView"><button data-gv="list" aria-pressed="true">명단</button><button data-gv="team" aria-pressed="false">모임별 (청모)</button></div>
+    <ul class="list" id="guestList"></ul>
+    <div id="teamBoard" class="tboard" hidden></div>
+  </section>
+</div>
+
+
+<nav class="tabbar" role="tablist"><div class="in">
+  <button data-tab="home" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>홈</button>
+  <button data-tab="check" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 6 1.2 1.2L7 5M3.5 12l1.2 1.2L7 11M3.5 18l1.2 1.2L7 17"/></svg>체크리스트</button>
+  <button data-tab="all" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>전체</button>
+  <button class="plus" id="fab" hidden><span class="pbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>추가</button>
+  <button data-tab="budget" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M16 15h2"/></svg>예산</button>
+  <button data-tab="guests" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6"/><circle cx="17" cy="8.5" r="2.5"/><path d="M16.5 13.6c2.2.1 3.7 1.5 4.1 3.9"/></svg>하객</button>
+</div></nav>
+<div id="sheetHost"></div>
+</body>
+</html>
