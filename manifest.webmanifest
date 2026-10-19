@@ -1,12 +1,12 @@
 {
- "name": "웨딩노트",
- "short_name": "웨딩노트",
+ "name": "아이두웨딩",
+ "short_name": "아이두웨딩",
  "description": "두 사람이 함께 쓰는 결혼 준비 플래너 (테스트)",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
- "background_color": "#FBF6F7",
- "theme_color": "#FBF6F7",
+ "background_color": "#FFFFFF",
+ "theme_color": "#FFFFFF",
  "lang": "ko",
  "icons": [
   {
