@@ -14,8 +14,8 @@
 <meta name="apple-mobile-web-app-title" content="아이두웨딩">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="mobile-web-app-capable" content="yes">
-  <script type="module" crossorigin src="./assets/index-pwa-CA5asEDs.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-pwa-BlC0b-fF.css">
+  <script type="module" crossorigin src="./assets/index-pwa-UA2Q8z4L.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-pwa-Dgm9mkBi.css">
 </head>
 <body>
 <div id="gate" class="gate"><div class="g-card"><p class="g-sub">불러오는 중…</p></div></div>
@@ -89,13 +89,12 @@
 
   <!-- BUDGET -->
   <section id="tab-budget" hidden>
-    <div class="head"><h1>예산</h1><button class="link" id="addCost">+ 비용 추가</button></div>
-    <div class="money-top" id="moneyTop"></div>
-    <button class="est-btn" id="openEstimate" type="button"><span>예산을 잘 모르겠다면</span><b>지역 평균으로 예상 비용 보기 ›</b></button>
-    <div class="seg" id="budgetSeg"><button data-b="cat" aria-pressed="true">카테고리</button><button data-b="sched" aria-pressed="false">결제 예정</button><button data-b="ledger" aria-pressed="false">낸 돈</button><button data-b="vendor" aria-pressed="false">업체</button></div>
-    <div id="bCat" class="tboard"></div>
-    <div id="bSched" class="card block" hidden><div class="row-head"><h2>결제 예정</h2><span class="sub num" id="schedSum"></span></div><div id="sched"></div></div>
-    <div id="bLedger" class="card block" hidden><div class="row-head"><h2>낸 돈</h2><span class="sub num" id="ledgerSum"></span></div><div id="ledger"></div></div>
+    <div class="head"><h1>가계부</h1></div>
+    <div class="lb-top" id="moneyTop"></div>
+    <div class="lb-bar"><div class="seg lb-seg" id="budgetSeg"><button data-b="ledger" aria-pressed="true">지출내역</button><button data-b="sched" aria-pressed="false">결제예정</button><button data-b="vendor" aria-pressed="false">업체</button></div><button type="button" class="lb-add" id="addCost" aria-label="비용 추가"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div>
+    <div id="bCat" hidden></div><button id="openEstimate" type="button" hidden></button>
+    <div id="bLedger"><span id="ledgerSum" hidden></span><div id="ledger"></div></div>
+    <div id="bSched" hidden><span id="schedSum" hidden></span><div id="sched"></div></div>
     <div id="bVendor" hidden style="display:flex;flex-direction:column;gap:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span class="sub num" id="vendorSum"></span><button class="link" id="addVendor">+ 업체 추가</button></div>
       <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="vendorSearch" type="search" placeholder="업체, 항목 검색"></div>
@@ -132,7 +131,7 @@
   <button data-tab="home" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>홈</button>
   <button data-tab="check" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 6 1.2 1.2L7 5M3.5 12l1.2 1.2L7 11M3.5 18l1.2 1.2L7 17"/></svg>체크리스트</button>
   <button class="plus" id="fab" hidden><span class="pbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>추가</button>
-  <button data-tab="budget" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M16 15h2"/></svg>예산</button>
+  <button data-tab="budget" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M16 15h2"/></svg>가계부</button>
   <button data-tab="guests" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6"/><circle cx="17" cy="8.5" r="2.5"/><path d="M16.5 13.6c2.2.1 3.7 1.5 4.1 3.9"/></svg>하객</button>
   <button data-tab="all" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>전체</button>
 </div></nav>
